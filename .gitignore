@@ -1,0 +1,13 @@
+# Node/Editor common
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+build/
+
+# No secrets in repo; keep only Markdown and scripts
+*.env
+secrets.*

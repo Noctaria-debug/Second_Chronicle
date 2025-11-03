@@ -1,0 +1,12 @@
+{
+  "name": "Second_Chronicle",
+  "version": "0.1.0",
+  "created": "2025-10-28",
+  "chapters": [
+    "Thoughtbook/Chapter_01_恋と存在.md"
+  ],
+  "policies": {
+    "privacy": "no personal identifiers, keep quotes paraphrased",
+    "commit_style": "meaningful messages, one commit per session"
+  }
+}
