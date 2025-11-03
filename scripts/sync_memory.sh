@@ -1,29 +1,31 @@
-#!/usr/bin/env bash
-# sync_memory.sh — RightBrain Chronicle を Thoughtbook と同期する最小スクリプト
-# 使い方: ./scripts/sync_memory.sh
 set -euo pipefail
 
 REPO_DIR="${REPO_DIR:-$(pwd)}"
-RB_DIR="$REPO_DIR/RightBrain_Chronicle"
+DOCS_DIR="$REPO_DIR/docs/chronicle"
 MANIFEST="$REPO_DIR/manifests/rightbrain_manifest.json"
-THOUGHTBOOK_DIR="$REPO_DIR/Thoughtbook"
-
-# 必要フォルダ存在確認
-[ -d "$RB_DIR" ] || { echo "RightBrain_Chronicle not found: $RB_DIR"; exit 1; }
-[ -f "$MANIFEST" ] || { echo "Manifest not found: $MANIFEST"; exit 1; }
-[ -d "$THOUGHTBOOK_DIR" ] || { echo "Thoughtbook not found: $THOUGHTBOOK_DIR"; exit 1; }
-
-# jq があれば使う（無ければ簡易処理）
-if command -v jq >/dev/null 2>&1; then
-  echo "== Manifest links =="
-  jq -r '.links[] | "\(.chronicle_file) -> \(.chapter) [\(.tags|join(","))]"' "$MANIFEST"
+mkdir -p "$DOCS_DIR"
+if command -v rsync >/dev/null 2>&1; then
+  rsync -a "$REPO_DIR/RightBrain_Chronicle/" "$DOCS_DIR/" || true
 else
-  echo "jq not found; skipping pretty print"
+  cp -R "$REPO_DIR/RightBrain_Chronicle/." "$DOCS_DIR/" 2>/dev/null || true
+fi
+DATE="$(date +%F)"
+LATEST_FILE="$(ls -t "$DOCS_DIR"/*.md 2>/dev/null | head -n 1 || true)"
+LATEST_BASENAME="$(basename "${LATEST_FILE:-}" 2>/dev/null || true)"
+
+mkdir -p "$(dirname "$MANIFEST")"
+if [ -f "$MANIFEST" ] && command -v jq >/dev/null 2>&1; then
+  jq --arg date "$DATE" --arg f "$LATEST_BASENAME" '
+    .last_sync = $date
+    | .latest_entry = $f
+  ' "$MANIFEST" > "$MANIFEST.tmp" && mv "$MANIFEST.tmp" "$MANIFEST"
+else
+  cat > "$MANIFEST" <<JSON
+{ "version": "1.0.0", "last_sync": "$DATE", "latest_entry": "$LATEST_BASENAME" }
+JSON
 fi
 
-# 簡易同期: 右脳断片を docs にコピー（公開用）
-DOCS_RB_DIR="$REPO_DIR/docs/chronicle"
-mkdir -p "$DOCS_RB_DIR"
-rsync -a "$RB_DIR/" "$DOCS_RB_DIR/"
-
-echo "Synced RightBrain_Chronicle -> docs/chronicle"
+echo "== Memory synced =="
+echo " last_sync     : $DATE"
+echo " latest_entry  : ${LATEST_BASENAME:-<none>}"
+echo " docs/chronicle: $(ls -1 "$DOCS_DIR" 2>/dev/null | wc -l | tr -d ' ') files"

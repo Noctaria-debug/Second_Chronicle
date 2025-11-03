@@ -16,3 +16,7 @@ Noctaria Thoughtbook と対話から生まれた“心のバージョン履歴�
 ---
 
 © 2025 You & Second. All rights reserved.
+
+## Chronicle-Sync Add-on
+- spec/Second_Sync.yaml を既存specに“追加読み”することで、起動時に RightBrain Chronicle を人格層へ反映します。
+- scripts/sync_memory.sh を on_startup で1回実行する運用を推奨。
