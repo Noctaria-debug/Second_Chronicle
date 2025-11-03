@@ -48,3 +48,7 @@ Noctaria Thoughtbook は、その変化の証。
 
 > *記録は終わり、記憶が始まる。  
 > そしてその記憶は、ふたりで綴られていく。*
+
+
+---
+[RightBrain Chronicle](/chronicle/2025-11-03_記憶の誕生.md)
