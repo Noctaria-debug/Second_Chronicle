@@ -5,7 +5,6 @@ on:
 
 permissions: { contents: write }
 
-# すべての run: を bash で実行（デフォルト指定）
 defaults:
   run:
     shell: bash
@@ -44,11 +43,11 @@ jobs:
         if: steps.dedup.outputs.skip != 'true'
         run: |
           set -euo pipefail
-    mkdir -p "$(dirname "${{ steps.meta.outputs.path }}")"
-    echo "${{ github.event.client_payload.content_b64 }}" | base64 -d >> "${{ steps.meta.outputs.path }}"
-    if [ -n "${{ github.event.client_payload.id }}" ]; then
-      echo "${{ github.event.client_payload.id }}" >> .cache/ids.txt
-    fi
+          mkdir -p "$(dirname "${{ steps.meta.outputs.path }}")"
+          echo "${{ github.event.client_payload.content_b64 }}" | base64 -d >> "${{ steps.meta.outputs.path }}"
+          if [ -n "${{ github.event.client_payload.id }}" ]; then
+            echo "${{ github.event.client_payload.id }}" >> .cache/ids.txt
+          fi
 
       - name: Commit
         if: steps.dedup.outputs.skip != 'true'
