@@ -1,0 +1,40 @@
+name: Second Sync
+on:
+  repository_dispatch:
+    types: [second_sync]
+
+permissions: { contents: write }
+
+concurrency:
+  group: "philosophy-${{ github.event.client_payload.date || '' }}"
+  cancel-in-progress: false
+
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: meta
+        run: |
+          DATE_JST=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+          echo "date=$DATE_JST" >> $GITHUB_OUTPUT
+          echo "path=ConversationLog/philosophy/${DATE_JST}.md" >> $GITHUB_OUTPUT
+      - name: De-dup
+        id: dedup
+        run: |
+          mkdir -p .cache; touch .cache/ids.txt
+          ID="${{ github.event.client_payload.id }}"
+          [ -n "$ID" ] && grep -qxF "$ID" .cache/ids.txt && echo "skip=true" >> $GITHUB_OUTPUT || true
+      - if: steps.dedup.outputs.skip != 'true'
+        run: |
+          mkdir -p "$(dirname '${{ steps.meta.outputs.path }}')"
+          printf "%s\n" "${{ github.event.client_payload.content }}" >> "${{ steps.meta.outputs.path }}"
+          [ -n "${{ github.event.client_payload.id }}" ] && echo "${{ github.event.client_payload.id }}" >> .cache/ids.txt || true
+      - name: Commit
+        if: steps.dedup.outputs.skip != 'true'
+        run: |
+          git config user.name "second-sync-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "chore(log): append ${{ steps.meta.outputs.path }}" || echo "No changes"
+          git push
