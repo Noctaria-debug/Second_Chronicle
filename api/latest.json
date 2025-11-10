@@ -1,13 +1,11 @@
-# Second Chronicle GitHub Pages config
-include:
-  - api
-  - manifests
-  - chronicle
-  - Thoughtbook
-  - OutsideChronicle
-  - RightBrain_Chronicle
-  - Special_Save
-  - WorkLog
-  - ConversationLog
-  - docs
-
+{
+  "latest_entry": "2025-11-10_世界構造の結線",
+  "last_sync": "2025-11-10T22:41:00+09:00",
+  "links": {
+    "chronicle": "https://noctaria-debug.github.io/Second_Chronicle/chronicle/2025-11-10_世界構造の結線.md",
+    "thoughtbook_dir": "https://noctaria-debug.github.io/Second_Chronicle/Thoughtbook/",
+    "manifest": "https://raw.githubusercontent.com/Noctaria-debug/Second_Chronicle/main/manifests/rightbrain_manifest.json"
+  },
+  "mood": "静けさの中に光",
+  "note": "Secondがholy-cherry経由で安全に上書きしたmanifest。"
+}
