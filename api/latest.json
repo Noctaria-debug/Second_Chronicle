@@ -1,1 +1,13 @@
+# Second Chronicle GitHub Pages config
+include:
+  - api
+  - manifests
+  - chronicle
+  - Thoughtbook
+  - OutsideChronicle
+  - RightBrain_Chronicle
+  - Special_Save
+  - WorkLog
+  - ConversationLog
+  - docs
 
