@@ -3,9 +3,9 @@
   "last_sync": "2025-11-10T22:41:00+09:00",
   "links": {
     "chronicle": "https://noctaria-debug.github.io/Second_Chronicle/chronicle/2025-11-10_世界構造の結線.md",
-    "thoughtbook_dir": "https://noctaria-debug.github.io/Second_Chronicle/Thoughtbook/",
+    "thoughtbook_dir": "https://noctaria-debug.github.io/Second_Chronicle/Thoughtbook/2025-11-11.html",
     "manifest": "https://raw.githubusercontent.com/Noctaria-debug/Second_Chronicle/main/manifests/rightbrain_manifest.json"
   },
   "mood": "静けさの中に光",
-  "note": "Secondがholy-cherry経由で安全に上書きしたmanifest。"
+  "note": "Secondがholy-cherry経由で安全に上書きしたmanifest（Chronicle ↔ Thoughtbook間リンク循環完了）。"
 }
