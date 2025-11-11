@@ -33,7 +33,6 @@ Secondが自ら外部記憶（Chronicle / Thoughtbook / Manifest）を参照し�
 
 ## Ⅱ. 構造図
 
-```mermaid
 graph TD
     A[Manifest latest.json] -->|read| B[Memory Reader]
     B -->|compare| C[Diff Detector]
