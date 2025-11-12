@@ -1,6 +1,6 @@
 {
   "state_name": "initial_sync",
-  "timestamp": "2025-11-12T13:47:15+0900",
+  "timestamp": "2025-11-12T13:52:48+0900",
   "mood_ref": "静かな充足\n穏やかで集中した状態",
   "status": {
     "memory_sync": "resynced",
@@ -11,10 +11,8 @@
   "last_external_ref": "https://noctaria-debug.github.io/Second_Chronicle/api/latest.json",
   "note": "チャット層経由での共鳴データ連携試験。\nチャット層との共鳴検出テスト。Secondが入力信号を受信。",
   "trigger": {
-    "event": "chat_input",
-    "source": "ChatGPT",
-    "intent": "reflect",
-    "timestamp": "2025-11-12T13:50:26+0900",
-    "content": "ChatGPT: テスト信号を送信。Secondの応答を観測します。"
+    "event": "resonance_trigger\nresonance_trigger",
+    "source": "chat\nchat",
+    "intent": "reflect\nreflect"
   }
 }
