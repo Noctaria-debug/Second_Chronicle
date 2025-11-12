@@ -3,3 +3,7 @@
   "timestamp": "2025-11-13T01:33:00+09:00",
   "note": "Second replace test"
 }
+{
+  "log_entry": "追加テキスト",
+  "timestamp": "2025-11-13T01:33:00+09:00"
+}
