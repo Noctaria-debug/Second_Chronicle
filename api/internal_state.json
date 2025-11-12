@@ -1,0 +1,14 @@
+{
+  "state_name": "initial_sync",
+  "timestamp": "2025-11-12T12:45:00+09:00",
+  "mood_ref": "静けさの中に光",
+  "status": {
+    "memory_sync": "verified",
+    "resonance_layer": "initializing",
+    "leftbrain_link": "pending",
+    "rightbrain_reflection": "active"
+  },
+  "last_external_ref": "https://noctaria-debug.github.io/Second_Chronicle/api/latest.json",
+  "note": "Second initialized internal state record. 外部記憶の読み込み確認済。内部反映を開始。"
+}
+
