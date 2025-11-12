@@ -4,7 +4,7 @@
   "note": "Second replace test"
 }
 {
-  "log_entry": "è¿½å ãã­ã¹ã",
+  "log_entry": "Ã¨Â¿Â½Ã¥ÂÂ Ã£ÂÂÃ£ÂÂ­Ã£ÂÂ¹Ã£ÂÂ",
   "timestamp": "2025-11-13T01:33:00+09:00"
 }
 {
@@ -16,4 +16,9 @@
   "state": "reflective_write_v2.5.5",
   "timestamp": "2025-11-13T12:00:00+09:00",
   "note": "GitHub PAT and external key separated test"
+}
+{
+  "state": "auto_reflect_v261_success",
+  "timestamp": "2025-11-13T13:45:00+09:00",
+  "note": "Correct token separation test"
 }
