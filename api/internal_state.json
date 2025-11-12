@@ -4,11 +4,16 @@
   "note": "Second replace test"
 }
 {
-  "log_entry": "追加テキスト",
+  "log_entry": "è¿½å ãã­ã¹ã",
   "timestamp": "2025-11-13T01:33:00+09:00"
 }
 {
   "state": "reflective_write",
   "timestamp": "2025-11-13T03:45:00+09:00",
   "note": "v2.5.1 path normalization test"
+}
+{
+  "state": "reflective_write_v2.5.5",
+  "timestamp": "2025-11-13T12:00:00+09:00",
+  "note": "GitHub PAT and external key separated test"
 }
