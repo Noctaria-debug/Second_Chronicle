@@ -7,3 +7,8 @@
   "log_entry": "追加テキスト",
   "timestamp": "2025-11-13T01:33:00+09:00"
 }
+{
+  "state": "reflective_write",
+  "timestamp": "2025-11-13T03:45:00+09:00",
+  "note": "v2.5.1 path normalization test"
+}
