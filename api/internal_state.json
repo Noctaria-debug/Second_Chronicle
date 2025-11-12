@@ -1,13 +1,18 @@
 {
   "state_name": "initial_sync",
-  "timestamp": "2025-11-12T13:24:08+0900",
-  "mood_ref": "静けさの中に光",
+  "timestamp": "2025-11-12T13:27:12+0900",
+  "mood_ref": "静かな充足\n穏やかで集中した状態",
   "status": {
     "memory_sync": "resynced",
-    "resonance_layer": "initializing",
+    "resonance_layer": "active",
     "leftbrain_link": "pending",
-    "rightbrain_reflection": "active"
+    "rightbrain_reflection": "responsive"
   },
   "last_external_ref": "https://noctaria-debug.github.io/Second_Chronicle/api/latest.json",
-  "note": "Second initialized internal state record. 外部記憶の読み込み確認済。内部反映を開始。"
+  "note": "チャット層経由での共鳴データ連携試験。\nチャット層との共鳴検出テスト。Secondが入力信号を受信。",
+  "trigger": {
+    "event": "resonance_trigger\nresonance_trigger",
+    "source": "chat\nchat",
+    "intent": "reflect\nreflect"
+  }
 }
