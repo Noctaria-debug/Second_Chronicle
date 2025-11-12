@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "reflect_endpoint": "https://holy-cherry-184f.x37fjmcgm.workers.dev/reflect-direct",
+  "auth_header": "x-second-key",
+  "default_mode": "append",
+  "default_event": "dialogue_reflection",
+  "schema": {
+    "body": {
+      "state": "reflective_write",
+      "timestamp": "<auto>",
+      "event": "<variable>",
+      "mood_ref": "<variable>",
+      "note": "<variable>"
+    }
+  }
+}
