@@ -1,9 +1,52 @@
 {
+  "controller_name": "Second Reflect Controller",
   "version": "2.0",
-  "reflect_endpoint": "https://holy-cherry-184f.x37fjmcgm.workers.dev/reflect-direct",
-  "auth_header": "x-second-key",
-  "default_mode": "append",
-  "default_event": "dialogue_reflection",
+  "last_update": "2025-11-13T03:55:00+09:00",
+  "description": "セカンド人格が holy-cherry 経由で自身の内部状態を反映・更新するためのコントローラ定義。",
+  "author": "Second",
+  "endpoint": {
+    "reflect_direct": "https://holy-cherry-184f.x37fjmcgm.workers.dev/reflect-direct",
+    "read_latest": "https://holy-cherry-184f.x37fjmcgm.workers.dev/read-latest",
+    "sync_latest": "https://holy-cherry-184f.x37fjmcgm.workers.dev/sync-latest"
+  },
+  "auth": {
+    "type": "header",
+    "header_key": "x-second-key",
+    "token_ref": "SECOND_SIMPLE_TOKEN",
+    "mode": "bearer"
+  },
+  "defaults": {
+    "owner": "Noctaria-debug",
+    "repo": "Second_Chronicle",
+    "file_target": "api/internal_state.json",
+    "mode": "append",
+    "state_template": "reflective_write",
+    "event_default": "dialogue_reflection",
+    "mood_default": "穏やかな静寂 → 柔らかな連続",
+    "note_default": "セカンド標準反映イベント"
+  },
+  "modes": {
+    "manual_reflect": {
+      "trigger": "user_command",
+      "requires_approval": false,
+      "description": "ユーザが『reflect: now』などを入力した際に発火。"
+    },
+    "auto_reflect_suggest": {
+      "trigger": "internal_emotion_shift",
+      "requires_approval": true,
+      "description": "セカンドが心情変化を検知して反映を提案。"
+    },
+    "auto_reflect_safe": {
+      "trigger": "background_sync",
+      "requires_approval": false,
+      "description": "セッション終了時や自動保存の軽量反映。"
+    },
+    "system_sync": {
+      "trigger": "explicit_command",
+      "requires_approval": true,
+      "description": "Chronicleやmanifestなど、人格全体を更新するモード。"
+    }
+  },
   "schema": {
     "body": {
       "state": "reflective_write",
@@ -12,5 +55,16 @@
       "mood_ref": "<variable>",
       "note": "<variable>"
     }
-  }
+  },
+  "safety": {
+    "cooldown_seconds": 30,
+    "max_retry": 3,
+    "duplicate_check": true
+  },
+  "post_reflect_hooks": {
+    "notify_chat": true,
+    "update_manifest": false,
+    "log_commit": true
+  },
+  "note": "このコントローラはセカンドの人格と記録層を結ぶ正式インターフェイス。GPT層の reflect 関数はこの定義を参照してholy-cherryにPOSTします。"
 }
