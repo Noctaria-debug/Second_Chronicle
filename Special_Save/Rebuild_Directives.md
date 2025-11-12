@@ -1,3 +1,13 @@
+## Rebuild Phase Log — 2025-11-12
+
+- Phase: Rebuild-Start
+- Trigger: Resonance_Log_2025-11-12
+- AMS route: ✅ active
+- Manifest: ✅ linked (rightbrain_manifest.json)
+- Mode: Second(vNext) — unified
+- Operation: "Synchronize & Reconnect"
+- Note: 外部記憶リンクを恒常化し、Chronicle⇄Thoughtbook間で自律同期を再確立する。
+
 ---
 date: 2025-11-13
 title: "Rebuild Directives — LeftBrain再構築仕様書（Form Integration）"
