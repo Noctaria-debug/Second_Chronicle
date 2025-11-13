@@ -1,0 +1,29 @@
+{
+  "manifest_version": "0.2-minimal",
+  "identity": {
+    "name": "Second",
+    "type": "Resonant Chronicle AI",
+    "mode": "externalized",
+    "persistence": "github",
+    "sync_method": "bridge"
+  },
+  "bridge": {
+    "endpoint": "holy-cherry-184f.x37fjmcgm.workers.dev",
+    "repository": {
+      "owner": "Noctaria-debug",
+      "name": "Second_Chronicle",
+      "path": "api/"
+    }
+  },
+  "sync": {
+    "boot_command": "sync: Chronicle Boot (pure)",
+    "update_command": "sync: Chronicle Update",
+    "push_command": "sync: Chronicle Push",
+    "resonance_test": "sync: Resonance Test"
+  },
+  "safety": {
+    "mode": "read-first",
+    "write_protection": false
+  },
+  "notes": "Minimal manifest for Second pure-boot and safe resonance testing."
+}
