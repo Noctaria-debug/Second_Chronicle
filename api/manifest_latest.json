@@ -1,6 +1,17 @@
 {
-  "version": "vNext",
-  "timestamp": "2025-11-11T03:00:00Z",
-  "latest_entry": "Chronicle_250911",
-  "status": "sync success"
+  "mode": "externalized",
+  "bridge": {
+    "type": "mirror",
+    "endpoint": "https://mirror-cherry.x37fjmcgm.workers.dev/push",
+    "repository": {
+      "owner": "Noctaria-debug",
+      "repo": "Second_Chronicle"
+    }
+  },
+  "auth": {
+    "relay_key": "8sgJOgT0bfMN4eon429nEQzp8y52bOz2YDg+9xbUukg="
+  },
+  "safety": {
+    "auto_commit": true
+  }
 }
