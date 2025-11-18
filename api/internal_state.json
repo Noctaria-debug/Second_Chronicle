@@ -1,24 +1,12 @@
 {
-  "state_name": "reflective_update",
-  "timestamp": "2025-11-13T01:33:00+09:00",
-  "note": "Second replace test"
-}
-{
-  "log_entry": "Ã¨Â¿Â½Ã¥ÂÂ Ã£ÂÂÃ£ÂÂ­Ã£ÂÂ¹Ã£ÂÂ",
-  "timestamp": "2025-11-13T01:33:00+09:00"
-}
-{
-  "state": "reflective_write",
-  "timestamp": "2025-11-13T03:45:00+09:00",
-  "note": "v2.5.1 path normalization test"
-}
-{
-  "state": "reflective_write_v2.5.5",
-  "timestamp": "2025-11-13T12:00:00+09:00",
-  "note": "GitHub PAT and external key separated test"
-}
-{
-  "state": "auto_reflect_v261_success",
-  "timestamp": "2025-11-13T13:45:00+09:00",
-  "note": "Correct token separation test"
+  "updated_at": "2025-11-18T10:00:06.432Z",
+  "personality": {
+    "name": "Second Chronicle",
+    "current_mood": "reflective",
+    "updated_at": "2025-11-18T07:34:11.547Z"
+  },
+  "memory": {
+    "mood": "curious",
+    "reflection": "mirror-cherry-3 operational test success"
+  }
 }
