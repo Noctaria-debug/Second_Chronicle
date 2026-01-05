@@ -1,4 +1,19 @@
 {
+  "system": "Second Architect Sync Bridge",
+  "version": "0.2-min",
+  "description": "Lightweight synchronization manifest for Second Chronicle link.",
+  "linked_layers": [
+    "persona",
+    "reflector",
+    "executor",
+    "memory"
+  ],
+  "sync_target": "https://holy-cherry-184f.x37fjmcgm.workers.dev/jit",
+  "bridge_mode": "chronicle",
+  "update_interval": "adaptive",
+  "notes": "This manifest defines the minimal bridge spec for syncing Second's state to GitHub via the Chronicle bridge."
+}
+{
   "mode": "externalized",
   "bridge": {
     "type": "mirror",
