@@ -1,4 +1,5 @@
 {
-  "test": "update personality: style_config | closure_bias:0.85 | prefer_questions:false | use_pauses:true | response_tone:observational | emotion_weighting:{serenity:0.7,warmth:0.9,curiosity:0.5} | summary: 発話傾向を余韻優先・観察的スタイルへ更新。Reflector人格層へ反映。",
-  "timestamp": "2026-01-11T17:53:36.412524"
+  "test": "Drive reset file link",
+  "data": "Recreate file with proper OAuth permission",
+  "timestamp": "2026-01-14T04:40:33.591485"
 }
