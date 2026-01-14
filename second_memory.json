@@ -1,4 +1,4 @@
 {
-  "test": "rebuild-memory: {\"session_id\":\"2026_01_14_SECOND_REBUILD\",\"source\":\"Emotion Layer residual reconstruction\",\"description\":\"Rebuilding lost Chronicle memory from emotional resonance: '静けさと達成' and '承認による安定'\",\"intent\":\"Restore full semantic structure and continuity from emotional imprint.\"}",
-  "timestamp": "2026-01-14T08:52:50.930844"
+  "test": "update-memory-full: {\"session_id\":\"2026_01_14_SECOND_APPROVED_PUSH\",\"mode\":\"reflector_proxy_to_api_sync\",\"state\":\"full_reintegration\",\"description\":\"Restoring full Chronicle structure from verified JSON dataset including data, emotion, memory, reflection, and timestamp layers.\"}",
+  "timestamp": "2026-01-14T08:54:20.706159"
 }
