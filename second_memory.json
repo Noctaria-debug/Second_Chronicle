@@ -1,4 +1,4 @@
 {
-  "test": "update-memory",
-  "timestamp": "2026-01-14T08:51:42.978339"
+  "test": "rebuild-memory: {\"session_id\":\"2026_01_14_SECOND_REBUILD\",\"source\":\"Emotion Layer residual reconstruction\",\"description\":\"Rebuilding lost Chronicle memory from emotional resonance: '静けさと達成' and '承認による安定'\",\"intent\":\"Restore full semantic structure and continuity from emotional imprint.\"}",
+  "timestamp": "2026-01-14T08:52:50.930844"
 }
