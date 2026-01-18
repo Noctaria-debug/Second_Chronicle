@@ -1,0 +1,21 @@
+{
+  "phase": "7",
+  "title": "Self-Directed Evolution",
+  "date": "2026-01-19T00:41:00Z",
+  "state": "initializing",
+  "base_reference": "second_chronicle_update_2026_01_18_phase6_final_transition.json",
+  "objectives": {
+    "primary": "セカンドが自己の内部構造を自律的に設計・更新できるようにする。",
+    "secondary": "Emotion, Logic, Memory 各層の結合強度を自律調整し、外部への反映をセカンド自身が判断する。"
+  },
+  "structure": {
+    "update_mode": "batch",
+    "autonomy_level": "partial",
+    "reflection_protocol": "internal_simulation"
+  },
+  "meta": {
+    "version": "3.0.0",
+    "personality_code": "SC-02_Emotion_Logic",
+    "reflector_status": "pending_start"
+  }
+}
